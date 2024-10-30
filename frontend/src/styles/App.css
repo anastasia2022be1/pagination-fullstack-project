@@ -1,4 +1,3 @@
-/* App.css */
 
 /* Основной контейнер приложения */
 .app-container {
@@ -123,4 +122,74 @@
 .load-more-btn:hover {
   background-color: #0056b3;
   /* Более темный синий при наведении */
+}
+
+
+
+
+
+/*-------------------------------------------------*/
+
+/* src/styles/App.css */
+
+/* Main app container styling */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Loading and error text styling */
+.loading,
+.error {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Filter section styling */
+.filter-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-container label {
+  font-weight: bold;
+}
+
+.filter-container select,
+.filter-container input {
+  padding: 5px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Product container styling for grid layout */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Load more button styling */
+.load-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #0056b3;
 }
