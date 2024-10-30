@@ -1,0 +1,126 @@
+/* App.css */
+
+/* Основной контейнер приложения */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  /* Размещаем элементы по вертикали */
+  align-items: center;
+  /* Выравниваем элементы по центру */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  /* Внутренний отступ для контейнера */
+}
+
+/* Стили для текста загрузки и ошибки */
+.loading,
+.error {
+  font-size: 1.2em;
+  /* Размер шрифта увеличен */
+  color: #555;
+  /* Цвет текста */
+}
+
+/* Секция фильтров */
+.filter-container {
+  display: flex;
+  gap: 15px;
+  /* Расстояние между элементами */
+  align-items: center;
+  margin-bottom: 20px;
+  /* Отступ снизу */
+}
+
+.filter-container label {
+  font-weight: bold;
+  /* Жирный текст для меток */
+}
+
+.filter-container select,
+.filter-container input {
+  padding: 5px;
+  /* Внутренний отступ для полей ввода */
+  font-size: 1em;
+  border: 1px solid #ccc;
+  /* Серая граница */
+  border-radius: 5px;
+  /* Закругленные углы */
+}
+
+/* Сетка для отображения продуктов */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Автоматическое размещение колонок */
+  gap: 20px;
+  /* Расстояние между карточками */
+  width: 100%;
+  /* Ширина контейнера */
+  max-width: 1200px;
+  /* Максимальная ширина */
+}
+
+/* Индивидуальные карточки для продукта */
+.product-card {
+  background-color: #f9f9f9;
+  /* Цвет фона карточки */
+  border: 1px solid #ddd;
+  /* Легкая граница */
+  border-radius: 10px;
+  /* Закругленные углы */
+  padding: 15px;
+  /* Внутренний отступ */
+  text-align: center;
+  /* Центрируем текст */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Плавная анимация при наведении */
+}
+
+.product-card h2 {
+  font-size: 1.3em;
+  /* Размер шрифта заголовка */
+  color: #333;
+  /* Темный цвет текста */
+  margin-bottom: 10px;
+  /* Отступ снизу */
+}
+
+.product-card p {
+  font-size: 1.1em;
+  /* Размер шрифта для цены */
+  color: #666;
+  /* Серый цвет текста */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  /* Поднимаем карточку при наведении */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Тень под карточкой при наведении */
+}
+
+/* Кнопка загрузки дополнительных продуктов */
+.load-more-btn {
+  margin-top: 20px;
+  /* Отступ сверху */
+  padding: 10px 20px;
+  /* Внутренний отступ */
+  font-size: 1em;
+  color: white;
+  /* Белый текст */
+  background-color: #007bff;
+  /* Синий фон */
+  border: none;
+  /* Убираем границу */
+  border-radius: 5px;
+  /* Закругленные углы */
+  cursor: pointer;
+  /* Указатель при наведении */
+  transition: background-color 0.3s ease;
+  /* Плавное изменение фона при наведении */
+}
+
+.load-more-btn:hover {
+  background-color: #0056b3;
+  /* Более темный синий при наведении */
+}
