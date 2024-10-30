@@ -6,7 +6,6 @@ import { connect } from "./db.js";
 
 import productsRouter from "./routes/productsRouter.js"
 
-
 // Создаем экземпляр приложения Express
 const app = express();
 app.use(cors());
@@ -15,7 +14,7 @@ app.use(express.json())
 // Подключение к MongoDB
 await connect();
 
-app.use("/products", productsRouter);
+app.use("/api/products", productsRouter);
 
 // globale Fehlerbehandlung
 app.use((err, req, res, next) => {

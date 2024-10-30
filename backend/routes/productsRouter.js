@@ -4,7 +4,7 @@ import Product from "../models/Product.js";
 const router = express.Router();
 
 // Маршрут для получения продуктов с пагинацией и сортировкой
-router.get("/api", async (req, res, next) => {
+router.get("/", async (req, res, next) => {
     try {
         // Получаем параметры запроса для пагинации
         const limit = parseInt(req.query.limit) || 10; // Устанавливаем лимит продуктов на странице, по умолчанию 10
